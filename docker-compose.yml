@@ -8,3 +8,6 @@ services:
         - "broker/:/mosquitto/data/"
       ports:
         - "1883:1883"
+    broker_log_writer:
+        build: "broker_logger/."
+        
