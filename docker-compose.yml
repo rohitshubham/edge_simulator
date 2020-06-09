@@ -10,4 +10,7 @@ services:
         - "1883:1883"
     broker_log_writer:
         build: "broker_logger/."
+        depends_on: 
+          - broker
+        
         
