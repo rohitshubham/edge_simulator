@@ -1,27 +1,56 @@
 import paho.mqtt.client as mqtt
 import json
 import sys
+from datetime import datetime
+import logging
+
+
+LOG_FORMAT_STRING = "%Y-%m-%d"
+LOG_LEVEL = "INFO"
+
+def get_formatted_datetime():
+    now = datetime.now()     
+    return now.strftime(LOG_FORMAT_STRING)
+
+
+logPath = "./log"
+fileName = f"mqtt_logs_{get_formatted_datetime()}"
+
+logFormatter = logging.Formatter("%(asctime)s [%(threadName)-12.12s] [%(levelname)-5.5s]  %(message)s")
+rootLogger = logging.getLogger("mqtt_application")
+rootLogger.setLevel(logging.DEBUG)
+
+fileHandler = logging.FileHandler("{0}/{1}.log".format(logPath, fileName))
+fileHandler.setFormatter(logFormatter)
+fileHandler.setLevel(logging.DEBUG)
+rootLogger.addHandler(fileHandler)
+
+consoleHandler = logging.StreamHandler()
+consoleHandler.setFormatter(logFormatter)
+consoleHandler.setLevel(logging.DEBUG)
+rootLogger.addHandler(consoleHandler)
 
 args = sys.argv
 
 host = "localhost"#args[1] 
 port = 1883 #int(args[2])
 
+
 def on_connect(client, userdata, flags, rc):
-    print("Connected to broker")
+    rootLogger.info("Connected to broker")
     client.subscribe("#")
 
 def on_disconnect(client, userdata, rc):
-    print("Disconnect, reason: " + str(rc))
-    print("Disconnect, reason: " + str(client))
+    rootLogger.info("Disconnect, reason: " + str(rc))
+    rootLogger.info("Disconnect, reason: " + str(client))
 
 
 def on_message(mosq, obj, msg):
-    print("Recevied message")
-    print(str(msg.payload))
+    logger(msg)
 
 def logger(msg):
-    log_string = f"Topic: {}"
+    log_string = f"topic: {msg.topic} payload: {msg.payload} qos: {msg.qos} retain: {msg.retain}"
+    rootLogger.info(log_string)
 
 client = mqtt.Client("testclient")
 client.on_connect = on_connect
