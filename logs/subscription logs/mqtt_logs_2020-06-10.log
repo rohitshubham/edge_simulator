@@ -13,3 +13,20 @@
 2020-06-10 12:59:42,366 [MainThread  ] [INFO ]  topic: temprature/topic payload: b'{"Temperature":5.742781178386354,"Name":"Node 2"}' qos: 0 retain: 0
 2020-06-10 12:59:43,495 [MainThread  ] [INFO ]  topic: temprature/topic payload: b'{"Temperature":3.358159487012069,"Name":"Node 1"}' qos: 0 retain: 0
 2020-06-10 12:59:48,500 [MainThread  ] [INFO ]  topic: temprature/topic payload: b'{"Temperature":6.765914749054119,"Name":"Node 1"}' qos: 0 retain: 0
+2020-06-10 17:26:50,995 [MainThread  ] [INFO ]  Connected to broker
+2020-06-10 17:26:57,156 [MainThread  ] [INFO ]  topic: temprature/topic payload: b'{"Temperature":8.682248901391747,"Name":"Node 2"}' qos: 0 retain: 0
+2020-06-10 17:26:59,192 [MainThread  ] [INFO ]  topic: temprature/topic payload: b'{"Temperature":4.342330242656485,"Name":"Node 1"}' qos: 0 retain: 0
+2020-06-10 17:26:59,414 [MainThread  ] [INFO ]  topic: temprature/topic payload: b'{"Temperature":2.8341381566129087,"Name":"Node 3"}' qos: 0 retain: 0
+2020-06-10 17:27:04,158 [MainThread  ] [INFO ]  topic: temprature/topic payload: b'{"Temperature":9.282064331911497,"Name":"Node 2"}' qos: 0 retain: 0
+2020-06-10 17:27:04,228 [MainThread  ] [INFO ]  topic: temprature/topic payload: b'{"Temperature":9.430327860826054,"Name":"Node 1"}' qos: 0 retain: 0
+2020-06-10 17:27:09,205 [MainThread  ] [INFO ]  topic: temprature/topic payload: b'{"Temperature":1.5549179297959004,"Name":"Node 1"}' qos: 0 retain: 0
+2020-06-10 17:27:10,416 [MainThread  ] [INFO ]  topic: temprature/topic payload: b'{"Temperature":9.237311750675449,"Name":"Node 3"}' qos: 0 retain: 0
+2020-06-10 17:27:11,164 [MainThread  ] [INFO ]  topic: temprature/topic payload: b'{"Temperature":5.764881757037821,"Name":"Node 2"}' qos: 0 retain: 0
+2020-06-10 17:27:14,209 [MainThread  ] [INFO ]  topic: temprature/topic payload: b'{"Temperature":2.235886528891371,"Name":"Node 1"}' qos: 0 retain: 0
+2020-06-10 17:27:18,159 [MainThread  ] [INFO ]  topic: temprature/topic payload: b'{"Temperature":9.77915626593963,"Name":"Node 2"}' qos: 0 retain: 0
+2020-06-10 17:27:19,209 [MainThread  ] [INFO ]  topic: temprature/topic payload: b'{"Temperature":2.801939892997718,"Name":"Node 1"}' qos: 0 retain: 0
+2020-06-10 17:27:21,417 [MainThread  ] [INFO ]  topic: temprature/topic payload: b'{"Temperature":5.838983410872512,"Name":"Node 3"}' qos: 0 retain: 0
+2020-06-10 17:27:24,213 [MainThread  ] [INFO ]  topic: temprature/topic payload: b'{"Temperature":4.115300358696718,"Name":"Node 1"}' qos: 0 retain: 0
+2020-06-10 17:27:25,159 [MainThread  ] [INFO ]  topic: temprature/topic payload: b'{"Temperature":5.056790352529312,"Name":"Node 2"}' qos: 0 retain: 0
+2020-06-10 17:27:29,217 [MainThread  ] [INFO ]  topic: temprature/topic payload: b'{"Temperature":0.41790241618379964,"Name":"Node 1"}' qos: 0 retain: 0
+2020-06-10 17:27:32,161 [MainThread  ] [INFO ]  topic: temprature/topic payload: b'{"Temperature":8.832701298469612,"Name":"Node 2"}' qos: 0 retain: 0
