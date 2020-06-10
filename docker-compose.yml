@@ -1,16 +1,18 @@
 version: "3.0"
 services:
     broker:
-      image: eclipse-mosquitto
+      image: toke/mosquitto:latest
       volumes:
-        - "broker/mosquitto.conf:/mosquitto/config/mosquitto.conf"
-        - "logs/broker:/mosquitto/log/mosquitto.log"
-        - "broker/:/mosquitto/data/"
+        - "./broker/mosquitto.conf:/mosquitto/config/mosquitto.conf"
+        - "./logs/broker:/mosquitto/log/"
+        - "./broker/:/mosquitto/data/"
       ports:
         - "1883:1883"
     broker_log_writer:
         build: "broker_logger/."
         depends_on: 
           - broker
+        volumes:
+          - "./logs/subscription logs/:/logger/log"
         
         
