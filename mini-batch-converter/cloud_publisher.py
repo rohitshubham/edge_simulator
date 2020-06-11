@@ -9,9 +9,10 @@ def on_send_success(record_metadata):
 def on_send_error(excp):
     print('I am an errback', exc_info=excp)
 
-class KafkaProducer:
+class KafkaPublisher:
     def __init__(self, config):
         super().__init__()
+        # msgpack serializer for improved efficiency
         self._producer = KafkaProducer(bootstrap_servers = config, value_serializer=msgpack.dumps)
 
 

@@ -3,7 +3,7 @@ import json
 import sys
 from datetime import datetime, timedelta
 import time 
-from cloud_publisher import publish_to_kafka
+from cloud_publisher import KafkaPublisher
 
 args = sys.argv
 
@@ -37,7 +37,7 @@ class MiniBatch:
             self._queue.append(data_dict)
 
             if (self.time_end - self.time_start).seconds > batch_pool_frequency:
-                publish_to_kafka(self._queue)
+                kafka_publisher.produce(topic = f"{broker_name}.sensor.temperature", value = self._queue)
                 self._queue = []
                 self.time_start = datetime.now()
 
@@ -57,7 +57,8 @@ def on_disconnect(client, userdata, rc):
 def on_message(mosq, obj, msg):
     batch.mini_cluster(msg)
 
-batch = MiniBatch() 
+batch = MiniBatch()
+kafka_publisher = KafkaPublisher(kafka_broker) 
 client = mqtt.Client("testclient")
 client.on_connect = on_connect
 client.on_disconnect = on_disconnect
