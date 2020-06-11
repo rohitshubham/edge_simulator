@@ -1,3 +1,3 @@
-kakfa-python
-paho-mqtt
-msgpack
+paho-mqtt==1.5.0
+msgpack==1.0.0
+kafka-python==2.0.1

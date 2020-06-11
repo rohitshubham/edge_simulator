@@ -5,6 +5,7 @@ RUN apk update && \
     apk add bind-tools 
 
 COPY requirements.txt requirements.txt
+
 RUN pip3 install -r requirements.txt
 
 WORKDIR /mini-batch-converter
