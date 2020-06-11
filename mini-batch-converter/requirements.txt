@@ -1,0 +1,3 @@
+kakfa-python
+paho-mqtt
+msgpack

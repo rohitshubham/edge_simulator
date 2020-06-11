@@ -14,5 +14,7 @@ services:
           - broker
         volumes:
           - "./logs/subscription logs/:/logger/log"
-        
-        
+    mini-batch-converter:
+        build: "mini-batch-converter/."
+        depends_on:
+          - broker        
