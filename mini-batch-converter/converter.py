@@ -59,7 +59,7 @@ def on_message(mosq, obj, msg):
 
 batch = MiniBatch()
 kafka_publisher = KafkaPublisher(kafka_broker) 
-client = mqtt.Client("testclient")
+client = mqtt.Client("mini-batch-converter")
 client.on_connect = on_connect
 client.on_disconnect = on_disconnect
 client.on_message = on_message

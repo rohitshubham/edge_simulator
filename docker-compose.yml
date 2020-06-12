@@ -14,7 +14,10 @@ services:
           - broker
         volumes:
           - "./logs/subscription logs/:/logger/log"
+        entrypoint: ["python3", "mqtt_client.py", "broker", "1883"]
     mini-batch-converter:
         build: "mini-batch-converter/."
         depends_on:
-          - broker        
+          - broker
+        # converter.py params: broker address, broker_port, broker_name, batch_intervals, kafka_broker_address
+        entrypoint: ["python3", "converter.py", "broker", "1883", "edge_1", "10", "kafka:1234"]        
