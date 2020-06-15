@@ -1,0 +1,53 @@
+2020-06-15 11:19:05,176 [MainThread  ] [INFO ]  Connected to broker
+2020-06-15 11:19:06,183 [MainThread  ] [INFO ]  Disconnect, reason: 1
+2020-06-15 11:19:06,184 [MainThread  ] [INFO ]  Disconnect, reason: <paho.mqtt.client.Client object at 0x7f97968534f0>
+2020-06-15 11:19:07,192 [MainThread  ] [INFO ]  Connected to broker
+2020-06-15 11:19:08,197 [MainThread  ] [INFO ]  Disconnect, reason: 1
+2020-06-15 11:19:08,197 [MainThread  ] [INFO ]  Disconnect, reason: <paho.mqtt.client.Client object at 0x7f97968534f0>
+2020-06-15 11:19:09,203 [MainThread  ] [INFO ]  Connected to broker
+2020-06-15 11:19:10,210 [MainThread  ] [INFO ]  Disconnect, reason: 1
+2020-06-15 11:19:10,210 [MainThread  ] [INFO ]  Disconnect, reason: <paho.mqtt.client.Client object at 0x7f97968534f0>
+2020-06-15 11:19:11,216 [MainThread  ] [INFO ]  Connected to broker
+2020-06-15 11:19:12,223 [MainThread  ] [INFO ]  Disconnect, reason: 1
+2020-06-15 11:19:12,223 [MainThread  ] [INFO ]  Disconnect, reason: <paho.mqtt.client.Client object at 0x7f97968534f0>
+2020-06-15 11:19:13,229 [MainThread  ] [INFO ]  Connected to broker
+2020-06-15 11:19:14,235 [MainThread  ] [INFO ]  Disconnect, reason: 1
+2020-06-15 11:19:14,236 [MainThread  ] [INFO ]  Disconnect, reason: <paho.mqtt.client.Client object at 0x7f97968534f0>
+2020-06-15 11:19:15,242 [MainThread  ] [INFO ]  Connected to broker
+2020-06-15 11:19:16,251 [MainThread  ] [INFO ]  Disconnect, reason: 1
+2020-06-15 11:19:16,251 [MainThread  ] [INFO ]  Disconnect, reason: <paho.mqtt.client.Client object at 0x7f97968534f0>
+2020-06-15 11:19:17,256 [MainThread  ] [INFO ]  Connected to broker
+2020-06-15 11:19:17,572 [MainThread  ] [INFO ]  topic: temprature/topic payload: b'{"Temperature":9.431432033134604,"Name":"Node 2"}' qos: 0 retain: 0
+2020-06-15 11:19:18,261 [MainThread  ] [INFO ]  Disconnect, reason: 1
+2020-06-15 11:19:18,262 [MainThread  ] [INFO ]  Disconnect, reason: <paho.mqtt.client.Client object at 0x7f97968534f0>
+2020-06-15 11:19:19,268 [MainThread  ] [INFO ]  Connected to broker
+2020-06-15 11:19:20,275 [MainThread  ] [INFO ]  Disconnect, reason: 1
+2020-06-15 11:19:20,276 [MainThread  ] [INFO ]  Disconnect, reason: <paho.mqtt.client.Client object at 0x7f97968534f0>
+2020-06-15 11:19:21,282 [MainThread  ] [INFO ]  Connected to broker
+2020-06-15 11:19:21,803 [MainThread  ] [INFO ]  topic: temprature/topic payload: b'{"Temperature":7.301482195719187,"Name":"Node 1"}' qos: 0 retain: 0
+2020-06-15 11:19:22,287 [MainThread  ] [INFO ]  Disconnect, reason: 1
+2020-06-15 11:19:22,287 [MainThread  ] [INFO ]  Disconnect, reason: <paho.mqtt.client.Client object at 0x7f97968534f0>
+2020-06-15 11:19:23,293 [MainThread  ] [INFO ]  Connected to broker
+2020-06-15 11:19:24,299 [MainThread  ] [INFO ]  Disconnect, reason: 1
+2020-06-15 11:19:24,299 [MainThread  ] [INFO ]  Disconnect, reason: <paho.mqtt.client.Client object at 0x7f97968534f0>
+2020-06-15 11:19:25,307 [MainThread  ] [INFO ]  Connected to broker
+2020-06-15 11:19:26,312 [MainThread  ] [INFO ]  Disconnect, reason: 1
+2020-06-15 11:19:26,312 [MainThread  ] [INFO ]  Disconnect, reason: <paho.mqtt.client.Client object at 0x7f97968534f0>
+2020-06-15 11:19:27,318 [MainThread  ] [INFO ]  Connected to broker
+2020-06-15 11:19:28,323 [MainThread  ] [INFO ]  Disconnect, reason: 1
+2020-06-15 11:19:28,323 [MainThread  ] [INFO ]  Disconnect, reason: <paho.mqtt.client.Client object at 0x7f97968534f0>
+2020-06-15 11:19:29,329 [MainThread  ] [INFO ]  Connected to broker
+2020-06-15 11:19:30,254 [MainThread  ] [INFO ]  topic: temprature/topic payload: b'{"Temperature":6.7643573234482535,"Name":"Node 3"}' qos: 0 retain: 0
+2020-06-15 11:19:30,334 [MainThread  ] [INFO ]  Disconnect, reason: 1
+2020-06-15 11:19:30,335 [MainThread  ] [INFO ]  Disconnect, reason: <paho.mqtt.client.Client object at 0x7f97968534f0>
+2020-06-15 11:19:31,340 [MainThread  ] [INFO ]  Connected to broker
+2020-06-15 11:19:31,578 [MainThread  ] [INFO ]  topic: temprature/topic payload: b'{"Temperature":6.1245431721997186,"Name":"Node 2"}' qos: 0 retain: 0
+2020-06-15 11:19:31,803 [MainThread  ] [INFO ]  topic: temprature/topic payload: b'{"Temperature":4.169058222930177,"Name":"Node 1"}' qos: 0 retain: 0
+2020-06-15 11:19:32,346 [MainThread  ] [INFO ]  Disconnect, reason: 1
+2020-06-15 11:19:32,346 [MainThread  ] [INFO ]  Disconnect, reason: <paho.mqtt.client.Client object at 0x7f97968534f0>
+2020-06-15 11:19:33,353 [MainThread  ] [INFO ]  Connected to broker
+2020-06-15 11:19:34,358 [MainThread  ] [INFO ]  Disconnect, reason: 1
+2020-06-15 11:19:34,359 [MainThread  ] [INFO ]  Disconnect, reason: <paho.mqtt.client.Client object at 0x7f97968534f0>
+2020-06-15 11:19:35,364 [MainThread  ] [INFO ]  Connected to broker
+2020-06-15 11:19:36,370 [MainThread  ] [INFO ]  Disconnect, reason: 1
+2020-06-15 11:19:36,370 [MainThread  ] [INFO ]  Disconnect, reason: <paho.mqtt.client.Client object at 0x7f97968534f0>

@@ -19,5 +19,5 @@ services:
         build: "mini-batch-converter/."
         depends_on:
           - broker
-        # converter.py params: broker address, broker_port, broker_name, batch_intervals, kafka_broker_address
-        entrypoint: ["python3", "converter.py", "broker", "1883", "edge_1", "10", "kafka:1234"]        
+        # converter.py params: broker address, broker_port, broker_name, batch_intervals, kafka_brokers_address
+        entrypoint: ["python3", "converter.py", "broker", "1883", "edge_1", "20", "192.168.1.12:32780,192.168.1.12:32779"]        

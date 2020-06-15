@@ -4,6 +4,17 @@ import sys
 from datetime import datetime, timedelta
 import time 
 from cloud_publisher import KafkaPublisher
+import logging
+
+
+logFormatter = logging.Formatter("%(asctime)s [%(threadName)-12.12s] [%(levelname)-5.5s]  %(message)s")
+rootLogger = logging.getLogger("mini-batcher-application")
+rootLogger.setLevel(logging.DEBUG)
+
+consoleHandler = logging.StreamHandler()
+consoleHandler.setFormatter(logFormatter)
+consoleHandler.setLevel(logging.DEBUG)
+rootLogger.addHandler(consoleHandler)
 
 args = sys.argv
 
@@ -11,7 +22,7 @@ mqtt_host = args[1]
 mqtt_port = int(args[2])
 broker_name = args[3]
 batch_pool_frequency = int(args[4])
-kafka_broker = args[5]
+kafka_broker = args[5].split(',')
 
 class MiniBatch:
     def __init__(self):
@@ -30,14 +41,15 @@ class MiniBatch:
                 "node_name" : payload["Name"]
             }
 
-    def mini_cluster(self, msg):
+    def mini_cluster(self, msg, kafka_publisher):
         try:
             payload = json.loads(msg.payload)
             data_dict = self.formatter(msg, payload)
             self._queue.append(data_dict)
 
             if (self.time_end - self.time_start).seconds > batch_pool_frequency:
-                kafka_publisher.produce(topic = f"{broker_name}.sensor.temperature", value = self._queue)
+                kafka_publisher.produce(topic = f"sensors.temperature.{broker_name}", value = self._queue)
+                rootLogger.info(f"Successfully published mini-batch of {len(self._queue)} values to Kafka broker")
                 self._queue = []
                 self.time_start = datetime.now()
 
@@ -55,7 +67,7 @@ def on_disconnect(client, userdata, rc):
 
 
 def on_message(mosq, obj, msg):
-    batch.mini_cluster(msg)
+    batch.mini_cluster(msg, kafka_publisher)
 
 batch = MiniBatch()
 kafka_publisher = KafkaPublisher(kafka_broker) 
