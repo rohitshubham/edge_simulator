@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.com/rohitshubham/edge_simulator.svg?branch=master)](https://travis-ci.com/rohitshubham/edge_simulator)
+
+---
+
 ## Edge Computing Node Simulator Project
 
 A simple edge node simulator that has the following components:
