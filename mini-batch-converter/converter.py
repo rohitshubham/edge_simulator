@@ -5,7 +5,7 @@ from datetime import datetime, timedelta
 import time 
 from cloud_publisher import KafkaPublisher
 import logging
-
+import json
 
 logFormatter = logging.Formatter("%(asctime)s [%(threadName)-12.12s] [%(levelname)-5.5s]  %(message)s")
 rootLogger = logging.getLogger("mini-batcher-application")
@@ -48,8 +48,11 @@ class MiniBatch:
             self._queue.append(data_dict)
 
             if (self.time_end - self.time_start).seconds > batch_pool_frequency:
-                kafka_publisher.produce(topic = f"sensors.temperature.{broker_name}", value = self._queue)
-                rootLogger.info(f"Successfully published mini-batch of {len(self._queue)} values to Kafka broker")
+                try:
+                    kafka_publisher.produce(f"sensors.temperature.{broker_name}", json.dumps(self._queue), rootLogger)
+                    rootLogger.info(f"Successfully published mini-batch of {len(self._queue)} values to Kafka broker on topic sensors.temperature.{broker_name}")
+                except Exception as e:
+                    rootLogger.error(f"Encountered issue while publishing: {e}")
                 self._queue = []
                 self.time_start = datetime.now()
 
