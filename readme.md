@@ -11,6 +11,9 @@ A simple edge node simulator that has the following components:
 * A mini-batcher that converts incoming stream data to a custom size batches
 * A Kafka Producers that pushes the code to a Kafka broker asynchronously
 
+![Architecture](Edge_SIM.png)
+* Fig 1: Edge Simulator workflow/architecture
+
 ## Requirements
 
 Complete environment is dockerized and does not require any other resouces except for `docker` and `docker-compose`.
