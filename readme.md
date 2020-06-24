@@ -2,9 +2,9 @@
 
 ---
 
-## Edge Computing Node Simulator Project
+## Edge Computing Node Sub-System Project
 
-A simple edge node simulator that has the following components:
+A simple edge node sub-system that has the following components:
 
 * An MQTT broker exposed on port 1883
 * An MQTT logger that logs all the incoming traffic in a log file.
@@ -12,7 +12,7 @@ A simple edge node simulator that has the following components:
 * A Kafka Producers that pushes the code to a Kafka broker asynchronously
 
 ![Architecture](Edge_SIM.png)
-* Fig 1: Edge Simulator workflow/architecture
+* Fig 1: Edge Sub-system workflow/architecture
 
 ## Requirements
 
